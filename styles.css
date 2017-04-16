@@ -1,0 +1,29 @@
+table, td, tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+  width: 50px;
+}
+
+td:hover {
+  background-color: #F4D53B;
+  cursor: pointer;
+}
+
+tr {
+  height: 50px;
+}
+
+#calculate-line {
+  text-align: right;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+#calculate-line:hover {
+  background-color: #FFFFFF;
+  cursor: default;
+}
