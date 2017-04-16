@@ -1,8 +1,6 @@
 var ERROR = "syntax error";
 var ZERO = "0";
 
-var listTdTags = document.getElementsByTagName("td");
-
 function lineCalculation(expression) {
 
   var result;
@@ -11,12 +9,14 @@ function lineCalculation(expression) {
     result = eval(expression);
   } catch (e) {
     if (e instanceof SyntaxError) {
-      result = "syntax error";
+      result = ERROR;
     }
   }
 
   return result;
 }
+
+var listTdTags = document.getElementsByTagName("td");
 
 for (var i = 0; i < listTdTags.length; i++) {
 
@@ -29,7 +29,7 @@ for (var i = 0; i < listTdTags.length; i++) {
       var calculateLine = document.getElementById("calculate-line");
 
       if (el.innerText === "AC") {
-        calculateLine.innerText = 0;
+        calculateLine.innerText = "0";
       } else if (el.innerText === "=") {
         calculateLine.innerText = lineCalculation(calculateLine.innerText);
       } else {
